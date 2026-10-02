@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SkiCenter.Business.Models;
 
-namespace SkiCenter.Business.Models
+public class Pris
 {
-    internal class Pris
-    {
-    }
+    public int PrisId { get; set; }
+
+    public string Artikeltyp { get; set; } = string.Empty;
+
+    public string Artikelbenamning { get; set; } = string.Empty;
+
+    public decimal Belopp { get; set; }
+
+    public decimal MomsSats { get; set; }
+
+    public DateTime GiltigFran { get; set; }
+
+    public DateTime GiltigTill { get; set; }
 }

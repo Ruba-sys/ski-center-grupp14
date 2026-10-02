@@ -1,12 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SkiCenter.Business.Models;
 
-namespace SkiCenter.Data.Configurations
+namespace SkiCenter.Data.Configurations;
+
+public class BokningConfiguration : IEntityTypeConfiguration<Bokning>
 {
-    internal class BokningConfiguration
+    public void Configure(EntityTypeBuilder<Bokning> builder)
     {
+        builder.HasKey(b => b.BokningsId);
+
+        builder.HasOne<Kund>()
+            .WithMany()
+            .HasForeignKey(b => b.KundId);
+
+        builder.HasOne<Anvandare>()
+            .WithMany()
+            .HasForeignKey(b => b.RegistreradAv);
     }
 }

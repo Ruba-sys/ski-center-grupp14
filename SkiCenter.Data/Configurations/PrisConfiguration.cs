@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SkiCenter.Business.Models;
 
-namespace SkiCenter.Data.Configurations
+namespace SkiCenter.Data.Configurations;
+
+public class PrisConfiguration : IEntityTypeConfiguration<Pris>
 {
-    internal class PrisConfiguration
+    public void Configure(EntityTypeBuilder<Pris> builder)
     {
+        builder.HasKey(p => p.PrisId);
     }
 }

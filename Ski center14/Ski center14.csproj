@@ -18,4 +18,8 @@
     <Folder Include="Resources\Styles\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SkiCenter.Business\SkiCenter.Business.csproj" />
+  </ItemGroup>
+
 </Project>

@@ -4,14 +4,14 @@ using SkiCenter.Business.Models;
 
 namespace SkiCenter.Data.Configurations;
 
-public class BetalningConfiguration : IEntityTypeConfiguration<Betalning>
+public class BokningsradConfiguration : IEntityTypeConfiguration<Bokningsrad>
 {
-    public void Configure(EntityTypeBuilder<Betalning> builder)
+    public void Configure(EntityTypeBuilder<Bokningsrad> builder)
     {
-        builder.HasKey(b => b.BetalningsId);
+        builder.HasKey(br => br.BokningsradId);
 
         builder.HasOne<Bokning>()
             .WithMany()
-            .HasForeignKey(b => b.BokningId);
+            .HasForeignKey(br => br.BokningId);
     }
 }

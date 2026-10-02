@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SkiCenter.Business.Models;
 
-namespace SkiCenter.Business.Models
+public class Roll
 {
-    internal class Roll
-    {
-    }
+    public int RollId { get; set; }
+
+    public string Rollnamn { get; set; } = string.Empty;
+
+    public string Beskrivning { get; set; } = string.Empty;
 }

@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SkiCenter.Business.Models;
 
-namespace SkiCenter.Data.Configurations
+namespace SkiCenter.Data.Configurations;
+
+public class RollConfiguration : IEntityTypeConfiguration<Roll>
 {
-    internal class RollConfiguration
+    public void Configure(EntityTypeBuilder<Roll> builder)
     {
+        builder.HasKey(r => r.RollId);
     }
 }

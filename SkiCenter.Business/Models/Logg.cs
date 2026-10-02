@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SkiCenter.Business.Models;
 
-namespace SkiCenter.Business.Models
+public class Logg
 {
-    internal class Logg
-    {
-    }
+    public int LoggId { get; set; }
+    public int AnvandarId { get; set; }
+
+    public DateTime Tidpunkt { get; set; }
+
+    public string Handelse { get; set; } = string.Empty;
+
+    public string Objekttyp { get; set; } = string.Empty;
+
+    public int ObjektId { get; set; }
 }

@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using SkiCenter.Business.Models;
 
-namespace SkiCenter.Data.Configurations
+namespace SkiCenter.Data.Configurations;
+
+public class AnvandareConfiguration : IEntityTypeConfiguration<Anvandare>
 {
-    internal class AnvandareConfiguration
+    public void Configure(EntityTypeBuilder<Anvandare> builder)
     {
+        builder.HasKey(a => a.AnvandarId);
+
+        builder.HasOne<Roll>()
+            .WithMany()
+            .HasForeignKey(a => a.RollId);
     }
 }

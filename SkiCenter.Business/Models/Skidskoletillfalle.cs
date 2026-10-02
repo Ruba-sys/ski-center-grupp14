@@ -1,12 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SkiCenter.Business.Models;
 
-namespace SkiCenter.Business.Models
+public class Skidskoletillfalle
 {
-    internal class Skidskoletillfalle
-    {
-    }
+    public int TillfalleId { get; set; }
+    public int LarareId { get; set; }
+
+    public DateTime Datum { get; set; }
+
+    public TimeSpan Starttid { get; set; }
+
+    public TimeSpan Sluttid { get; set; }
+
+    public string Niva { get; set; } = string.Empty;
+
+    public int MaxDeltagare { get; set; } = 10;
+
+    public string Status { get; set; } = string.Empty;
 }

@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace SkiCenter.Business.Models;
 
-namespace SkiCenter.Business.Models
+public class Boende
 {
-    internal class Boende
-    {
-    }
+    public int BoendeId { get; set; }
+
+    public string Benamning { get; set; } = string.Empty;
+
+    public string Boendetyp { get; set; } = string.Empty;
+
+    public int Kapacitet { get; set; }
+
+    public string Status { get; set; } = string.Empty;
 }
